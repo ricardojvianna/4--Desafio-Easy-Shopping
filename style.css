@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.container-left {
+    display: inline-block;
+    width: 60%;
+    margin-top: 20%;
+    padding-left: 136px; /* aqui ele já emparelhou o espaço do lado esquerdo para o h1, p, button
+    , tudo com o valor de 136px */
+    
+}
+
+.container-right {
+    display: inline-block;
+    width: 40%;
+    height: 100vh;
+    background-color: rgb(93, 93, 125, 0.16); /* deve ser colocado o opacity, dentro do rgb, para ele
+    não aplicar nos elementos acima do fundo */
+    position: absolute;
+
+}
+
+img {
+    
+    position: relative;
+    top: 25%;
+    right: 130px;
+
+}
+
+h1 {
+    color: #5D5D7D;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 80px;
+    width: 368px;
+    
+}
+
+p {
+    color: #5D5D7D;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    width: 540px;
+    margin: 15px 0; /* aqui está aplicado só margem em cima de 15px e embaixo 15px e dos lados
+    0, esse é um atalho onde o primeiro valor é para em cima e embaixo e o segundo valor para [
+    os lados. */
+    opacity: 0.6;
+}
+
+button {
+    width: 269px;
+    height: 62px;
+    background: #9499EA;
+    box-shadow: 0px 10px 24px rgba(148, 153, 234, 0.0979959);
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    
+    
+}
+
+button:hover {
+    background-color: #5705a4;
+    color: #bebecf;
+    width: 300px;
+}
+
+button:active {
+    background-color: #023310;
+    color: #bebecf;
+    width: 320px;
+}
+
+a {
+    font-size: 28px;
+    line-height: 41px;
+    color: #5D5D7D;
+    margin-right: 41px;
+}
+
+header{
+    margin: 24px 0 0 57px;
+}
+
+.link-header {
+    width: 59px;
+    height: 41px;
+    color: rgba(93, 93, 125, 1);
+    font-weight: 400;
+    font-size: 28px;
+    cursor: grab;
+
+}
+
+a:nth-child(2) {
+    color: rgba(93, 93, 125, 0.20);
+    font-weight: 400;
+    font-size: 28px;
+    
+}
+
+.link-header:hover {
+    font-size: 56px;
+    color: rgba(93, 93, 125, 0.25);
+}
+
+.link-header-w:hover {
+    font-size: 56px;
+    color: rgba(93, 93, 125, 1);
+}
+
+/*.link-menu-w {
+    width: 59px;
+    height: 41px;
+    color: rgba(93, 93, 125, 1);     -> eu havia feito dessa maneira, mas com nth-child temos o mesmo
+    font-weight: 400;                resultado.
+    font-size: 28px;
+    line-height: 41,5px;
+    margin-right: 41px;
+    opacity: 40%;
+} 
+*/
+
+
+
+/* ------------ responsividade ------------*/
+
+@media screen and (max-width: 900px) {
+
+    .container-left {
+        width: 100%;
+        height: 50%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container-right {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: static;
+        padding: 40px;
+        background-color: #66cdaa;
+    }
+
+    header {
+        display: none;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 52px;
+        width: auto;
+        margin: 58px 50px 0 50px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 24px;
+        width: auto;
+        margin: 15px 40px;
+        text-align: center;
+        
+    }
+
+    button {
+        margin: 0 auto;
+        display: block;
+
+    /* jeito fácil de alinhar um botão é aplicando somente 0 e auto, onde ele marca 0
+    para o sentindo para baixo e para cima e "auto" dos lados, mas isso só funciona quando 
+    estiver ativo o ---> display block .*/
+
+    }
+
+    img {
+        position: static;
+        max-width: 90%;
+        
+    }
+
+}
